@@ -12,9 +12,11 @@ var $fileButton = $('#fileButton');
 var $userList = $('#users');
 
 var core;
+var defaultServerPort = parseInt(window.location.port, 10) + 1;
 
 $usernameInput.val(getUser() || 'user' + new Date().getTime());
-$hostInput.val(getHost() || window.location.hostname + ':3001');
+
+$hostInput.val(getHost() || window.location.hostname + ':' + defaultServerPort);
 $loginScreen.show();
 
 $loginForm.submit(handleLoginFormSubmit);
