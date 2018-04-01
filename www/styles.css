@@ -15,6 +15,10 @@
     display: none;
 }
 
+#loginForm label {
+    display: block;
+}
+
 #chat {
     display: none;
 }
