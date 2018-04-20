@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function initChat() {
-        core = new SimpleChatClientCore(getHost());
+        core = new SimpleChatClientCore(getHost()!);
         core.login(getUser()).then(() => {
             core.on('chat message', handleChatMessage);
             core.on('user join', handleUserJoin);
