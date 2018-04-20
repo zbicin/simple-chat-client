@@ -1,0 +1,19 @@
+#users {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 200px;
+    bottom: 40px;
+    overflow: auto;
+    border-left: 1px solid #ccc;
+    padding: 4px 8px;
+    background: #fafafa;
+}
+
+#users li {
+    padding: 2px;
+}
+
+#users li:before {
+    content: '@';
+}

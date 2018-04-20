@@ -1,0 +1,36 @@
+#messages {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 200px;
+    bottom: 40px;
+    overflow: auto;
+    padding: 4px 8px;
+}
+
+#messages img {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+#messages li {
+    text-align: right;
+}
+
+#messages li span {
+    background: #f1f0f0;
+    border-radius: 4px;
+    color: #000;
+    display: inline-block;
+    margin: 1px;
+    padding: 4px;
+}
+
+#messages li.mine {
+    text-align: left;
+}
+
+#messages li.mine span {
+    background: #0084ff;
+    color: #fff;
+}

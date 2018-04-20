@@ -1,0 +1,33 @@
+@import './login.css';
+@import './messageForm.css';
+@import './messages.css';
+@import './users.css';
+
+* {
+    box-sizing: border-box;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+#chat {
+    display: none;
+}
+
+#chat ul {
+    list-style: none;
+    margin: 0;
+}
+
+#chat li {
+    animation: slide-up .1s ease;
+}
+
+@keyframes slide-up {
+    0% {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,19 @@
+#login {
+    position: fixed;
+    padding: 8px 16px;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    border: 1px solid #ccc;
+    text-align: center;
+    display: none;
+}
+
+#loginForm label {
+    display: block;
+}
+
+#loginForm input {
+    margin-bottom: 8px;
+}

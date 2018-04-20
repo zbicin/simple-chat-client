@@ -1,0 +1,21 @@
+#messageForm {
+    position: fixed;
+    bottom: 0;
+    padding: 3px;
+    height: 40px;
+    width: 100%;
+    display: flex;
+}
+
+#messageForm button {
+    flex: 0 0 100px;
+}
+
+#messageForm input {
+    flex: 1;
+}
+
+#messageForm input[type="file"] {
+    position: absolute;
+    bottom: -100px;
+}

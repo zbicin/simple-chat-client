@@ -28,8 +28,14 @@ document.addEventListener('DOMContentLoaded', function () {
     $fileInput.on('change', handleFileChange);
     $fileButton.click(handleFileButtonClick);
 
-    function appendMessage(html) {
-        $messageList.append($('<li>').html(html));
+    function appendMessage(html, isMine) {
+        let span = $('<span>').html(html);
+        let li = $('<li>');
+        if (isMine) {
+            li.addClass('mine');
+        }
+        li.append(span);
+        $messageList.append(li);
     }
 
     function getHost() {
@@ -45,10 +51,12 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function handleChatMessage(msg) {
+        let user = getUser();
+        let isMine = msg.author === user;
         if (msg.type === 'text') {
-            appendMessage('@' + msg.author + ': ' + msg.text);
+            appendMessage('@' + msg.author + ': ' + msg.text, isMine);
         } else if (msg.type === 'image') {
-            appendMessage('@' + msg.author + ': <img src="' + msg.image + '">');
+            appendMessage('@' + msg.author + ': <img src="' + msg.image + '">', isMine);
         }
     }
 
